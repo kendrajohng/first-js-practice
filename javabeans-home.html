@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+    <title>Javabeans Practice Home</title>
+
+
+</head>
+<body>
+
+<h1>basic building blocks</h1>
+
+primitive types:
+<ul>
+    <li>number</li>
+    <li>string</li>
+    <li>boolean</li>
+    <li>null</li>
+    <li>undefined</li>
+</ul>
+
+technically there are two others: symbol and BigInt
+
+
+<h2>numbers</h2>
+
+<ul>
+    <li>js has one number type</li>
+    <li>positive numbers</li>
+    <li>negative numbers</li>
+    <li>whole numbers (integers)</li>
+    <li>decimal numbers</li>
+
+</ul>
+
+<h3>math operations</h3>
+
+<ul>
+    <li>// creates a comment (the line is ignored)</li>
+    <li>+, -, *, /, %</li>
+    <li>% modulo - remainder
+
+    9 % 2 -> 1
+    2 goes into 9 how many times? 4 
+    what's the remainder? 1
+
+    19 % 4
+    19-16
+    3
+
+    to determine if number is even or odd
+
+    even number -> get remainder of 0
+    odd -> get 1</li>
+<li>** to get power
+    2 ** 4 = 2x2x2x2
+</li>
+</ul>
+    
+
+<h4>NaN</h4>
+
+<ul>
+    <li>not a number</li>
+    <li>is considered a number is js</li>
+    <li>NaN is a numeric value that represents something that is...not a number</li>
+    <li>example:  0/0 - NaN</li>
+    <li>typeof 4 -> "number"</li>
+    <li>typeof NaN -> "number"</li>
+    <li>0/0 -> NaN</li>
+    <li>1 + NaN -> NaN</li>
+
+</ul>
+
+<p>example problems:</p>
+
+<ul>
+<li>what does this evaluate to??</li>
+4 + 3 * 4 / 2
+
+answer:  10
+
+order of operations applies
+
+<li>(13 % 5) ** 2</li>
+5 goes into 13 2 times with a remainder of 3
+3x3 = 9
+
+
+<li>200 + 0/0</li>
+if 0/0 is NaN then 200 + NaN = NaN
+</ul>
+
+<hr>
+
+variables:
+* variables are like labels for values
+* we can store a value and give it a name so that we can:
+- refer back to it later
+- use that value to do stuff
+- or change it later on
+
+basic syntax:
+key word 'let'
+
+ex:  let year = 1985;
+
+we're registering a variable
+
+ex:  let numHens = 5;
+let numRoosters = 1;
+
+numHens + numRoosters
+-> 6
+
+numHens +1
+-> 6
+
+let totalChickens = numHens + numRoosters;
+
+totalChickens
+-> 6
+
+numHens = numHens + 1;
+-> 7
+
+<hr>
+
+let score = 0;
+
+score
+-> 0
+
+score = 5
+-> 5
+score = score + 5
+
+
+more common syntax:
+score += 5;
+score
+-> 60
+
+score += 10;
+70
+
+also:
+score -= 50;
+score
+->50
+
+score *= 2;
+-> 40
+
+common to increment or decrement by 1
+
+<hr>
+
+let numLives = 9;
+
+numLives -= 1;
+
+numLives--;
+8
+numLives
+7
+
+numLives++;
+
+<hr>
+
+<p>const and var</p>
+
+constant = value that doesn't change
+
+const luckyNum=26;
+
+luckyNum-> 26
+
+can't update/change the const value
+
+why use const?
+can store values we know won't change
+maybe store miles to feet
+
+const feetInMile = 5280;
+
+once we cover arrays & objects, we'll see other situations where const makes sense over let
+
+<hr>
+ v a r 
+ still works, but it's the old way
+
+ var runDistance = 26.2;
+ 
+no reason to use var 
+
+<hr>
+
+<p>booleans</p>
+true and false
+
+variables can change typeslet numPuppies = 23; // number
+numPuppies = false; // now a boolean 
+numPuppies = 100; // back to number
+
+it doesn't make sense to chanage from a number to a boolean but we can
+
+<hr>
+
+<p>naming variables</p>
+
+let current_date - snake case (not commonly used)
+
+let currentDate - camel case
+
+<hr>
+
+<p>strings</p>
+<ul>
+    <li>another primitive type</li>
+    <li>textual information</li>
+    <li>can be a single character long</li>
+    <li>can be zero characters long, empty string</li>
+    <li>can be long</li>
+
+</ul>
+
+<p>strings are indexed - every character in a string has a corresponding number associated with it</p>
+positional number starting at zero
+left to right
+
+let phone = (123) 456-7890
+
+phone[0]
+"("
+
+"lol".length
+3
+
+we can add strings together
+"lol" + "lol"
+"lollol"
+concatination
+
+can't change a string
+
+let firstName = "River"
+let lastName = "Phoenix"
+
+let fullName = firstName + lastName
+"RiverPhoneix"
+
+fullName
+"RiverPhoenix"
+
+
+<hr>
+<p>string methods</p>
+built-in actions we can perform with individual strings
+they help us do things like:
+- searching within a string
+- replacing part of a string
+- changing the casing of a string
+
+thing.method ()
+
+let msg = "leave me alone"
+
+msg.toUpperCase()
+
+"LEAVE ME ALONE"
+
+nondesctructive method
+
+let angryMsg = msg.toUpperCase()
+
+angryMsg
+"LEAVE ME ALONE"
+
+msg 
+"leave me alone"
+
+<p>trim</p>
+trims off any white space at the beginning or end of a string
+
+useful for input data from user
+
+let userInput = "    hello"
+
+userInput.trim()
+"hello"
+
+doesn't remove other characters
+
+we can chain methods together
+
+let greeting = "  hello"
+
+greeting.trim().toUpperCase()
+"HELLO"
+
+<hr>
+
+<p>arg</p>
+
+thing.method(arg)
+some methods accept arguments that modify their behavior
+think of them as inputs that we can pass in 
+we pass these arguments inside of the parentheses 
+
+example:
+
+let tvShow = 'catdog';
+
+tvShow.indexOf('cat'); // 0
+tvShow.indexOf('dog'); // 3
+tvShow.indexOf('z'); // -1 (not found)
+
+returns first occurence
+
+<p>slice</p>
+slice actually can accept more than one argumentslook at the docs
+
+extract or slice a portion of a string and gives us a new string
+
+str.slice(beginIndex[, endIndex])
+
+endIndex is optional
+
+example: 
+let msg = "haha that is so funny!".slice(5);
+-> 'that is so funny!'
+
+msg.slice(5, 9)
+-> "that"
+
+can you negative numbers it just works backwards
+
+<p>replace</p>
+
+need to pass in 2 arguments
+1) what we're trying to replace
+2) what we want to replace it with
+
+msg.replace('haha', 'lololol')
+-> 'lololol that is so funny!'
+
+also a replace all method
+but not fully implemented these days
+
+<p>repeat</p>
+
+"lol".repeat(10)
+
+repeats 10 times
+
+
+<hr>
+
+<p>string template literals</p>
+- must use back-tick key 
+``````````
+${}
+treated as an expression then evaluated
+not evaluated as a string
+
+`hello ${1+2}`
+-> hello 3
+
+example:
+"you bought " + qty + " " + product + ". Total is: " + price * qty
+
+`You bought ${qty} ${product}. Total is: ${price * qty}`
+-> "You bought 5 Artichoke. Total is: $11.25"
+
+<hr>
+
+<p>null & undefined</p>
+
+<ul>
+    <li>null - intentional absence of any value, must be assigned</li>
+    <li>undefined - variables that do not have an assigned value are undefined</li>
+</ul>
+
+<hr>
+
+<p>math object</p>
+
+- contains properties and methods for mathematical constants and functions
+
+Math.floor (23.90)
+-> 23
+
+chops it off
+
+Math.ceil (34.1)
+-> 35
+rounds up no matter what
+
+maybe not that useful on their own
+
+<p>random numbers</p>
+
+Math.random() gives us a random decimal between 0 and 1 (non-inclusive)
+
+maybe random number between 1 and 2 (like heads or tails)
+
+<p>random integers between 1 and 5</p>
+
+Math.random() *5
+Math.floor(Math.radom() *5)
+Math.floor(Math.radom() *5) + 1
+
+0 to 5
+
+add +1 to shift up
+
+<hr>
+<p>exercise</p>
+I've provided you with two variables, die1 and die2 which represent six-sided dice.  Each variable holds a randomly generated integer from 1 to 6.  Please create a new variable called roll, which will be a string that displays each die as well as their sum.  Follow this pattern:
+
+die1: 3
+
+die2: 5
+
+roll: "You rolled a 3 and a 5. They sum to 8"
+
+Here is another example with different numbers:
+
+die1: 6
+
+die2: 4,
+
+roll: You rolled a 6 and a 4. They sum to 10"
+
+const die1 = Math.floor(Math.random() *6) +1;
+const die2 = Math.floor(Math.random() *6) + 1;
+const roll = `You rolled a ${die1} and a ${die2}. They sum to ${die1 + die2}`;
+
+"You rolled a 3 and a 5. They sum to 8"
+
+
+
+
+</body>
+</html>

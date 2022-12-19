@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1>boolean logic</h1>
+<p>decision making with code</p>
+<p>list of comparison operators:</p>
+<ul>
+    <li> >, <, <=, >=, ==, !=, ===, !==</li>
+</ul>
+
+<p>to check if values are the same</p>
+
+<h2>== (double equals)</h2>
+<ul>
+    <li>checks for equality of value, but not equality of type</li>
+    <li>it coerces both values to the same type an ten compares them</li>
+    <li>this can lead to some unexpected results!</li>
+
+</ul>
+<p>examples:</p>
+
+expected results:
+1 == 1
+true 
+
+1 === '1'
+true  
+not really the same bc type is number and type is string
+
+0 == false
+true 
+
+. . .
+
+<p>triple equals - cares about type and value</p>
+1 === '1'
+false
+
+only use === or !==
+
+<h3>
+    console.log()
+</h3>
+<p>prints arguments to the console</p>
+
+<div class="container">
+console.error()
+console.alert()
+
+prompt("please enter a number");
+let useInput = prompt("please enter a number")
+
+parseInt(userInput)
+97
+parseInt("101")
+101
+
+gives number insteaad of string
+
+</div>
+
+<h5>conditional statements</h5>
+
+<p>if statement - only runs code if given condition is true</p>
+<p>example:</p>
+
+<ul>
+    <li>let rating = 3;</li>
+    <li>i (rating === 3) {
+        console.log("You are a superstar!");
+    }
+    </li>
+    <li>if false, just that code in {} doesnt run</li>
+
+</ul>
+
+<hr>
+
+<p>else if - if not the first thing, maybe this other thing</p>>
+<ul>
+    <li>let rating = 2;</li>
+    <li>i (rating === 3) {
+        console.log("You are a superstar!");
+    }
+    </li>
+    <li>else if (rating === 2) {
+        console.log("meets expectations");
+    }
+    </li>
+
+<p>else - if nothing else was true, do this...last piece of the entire conditional</p>
+
+
+<script src="javabeans-home.js"></script>
+
+
+</body>
+</html>
